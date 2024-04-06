@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PSR12" xsi:noNamespaceSchemaLocation="../../../phpcs.xsd">
+    <description>The PSR-12 coding standard.</description>
+
+    <file>app</file>
+    <file>config</file>
+    <file>database</file>
+    <file>public</file>
+    <file>routes</file>
+    <file>tests</file>
+
+    <arg name="colors" />
+    <arg name="basepath" value="./" />
+    <arg name="tab-width" value="4" />
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>public/index\.php</exclude-pattern>
+        <exclude-pattern>tests/Pest\.php</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR12">
+        <!-- 排除類別大括號必須在下一行 -->
+        <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine" />
+        <!-- 排除函式大括號必須在下一行 -->
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" />
+        <!-- 排除類別屬性方法必須緊貼在下一行 -->
+        <exclude name="PSR12.Classes.OpeningBraceSpace" />
+    </rule>
+
+    <!-- 類別大括號必須在同一行 -->
+    <rule ref="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
+    <!-- 函式大括號必須在同一行 -->
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine" />
+
+    <!-- 必須要有 declare(strict_types=1); -->
+    <rule ref="Generic.PHP.RequireStrictTypes.MissingDeclaration" />
+    <!-- 必須使用 ===、!== -->
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage.NotAllowed" />
+    <!-- 多行陣列最後一項後面必須要有逗號，單行陣列最後一項後面禁止逗號 -->
+    <rule ref="NormalizedArrays.Arrays.CommaAfterLast" />
+    <!-- 行尾不可以有空格 -->
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine" />
+
+    <!-- 禁用 array() -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+    <!-- 禁用一些函式 -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count" />
+                <element key="delete" value="unset" />
+                <element key="print" value="echo" />
+                <element key="is_null" value="null" />
+                <element key="create_function" value="null" />
+            </property>
+        </properties>
+    </rule>
+    <!-- 檢查未使用的變數 -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+        <properties>
+            <property name="ignoreTypeHints" type="array">
+                <element value="InputInterface"/>
+            </property>
+        </properties>
+    </rule>
+    <!-- 「.」前後必須是一格空格 -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true" />
+            <property name="spacing" value="1" />
+        </properties>
+    </rule>
+    <!-- 檢查「!」後的間距 -->
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <properties>
+            <property name="spacing" value="0" />
+        </properties>
+    </rule>
+    <!-- 檢查認知複雜度 -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="7" />
+            <property name="absoluteComplexity" value="7" />
+        </properties>
+    </rule>
+    <!-- 檢查巢狀層次 -->
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="3" />
+            <property name="absoluteNestingLevel" value="3" />
+        </properties>
+    </rule>
+    <!-- 屬性間距為零，前後必須空一行 (trait bug) -->
+    <!-- <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+        <properties>
+            <property name="spacing" value="0" />
+            <property name="spacingBeforeFirst" value="1" />
+        </properties>
+    </rule> -->
+    <!-- 方法間距為一，前後必須空一行 -->
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="1" />
+            <property name="spacingAfterLast" value="0" />
+        </properties>
+    </rule>
+
+    <!-- 使用 __DIR__，而不是 dirname(__FILE__) -->
+    <rule ref="Modernize" />
+    <!-- 檢查 Array 排版 -->
+    <rule ref="NormalizedArrays" />
+
+    <!-- 檢查函式參數類型定義 -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
+    <!-- 檢查函式返回類型定義 -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+    <!-- 不允許在字串內進行變數解析 -->
+    <rule ref="SlevomatCodingStandard.Strings.DisallowVariableParsing">
+        <properties>
+            <property name="disallowDollarCurlySyntax" value="true" />
+            <property name="disallowCurlyDollarSyntax" value="false" />
+            <property name="disallowSimpleSyntax" value="true" />
+        </properties>
+    </rule>
+
+    <!-- 必須要有 declare(strict_types=1); -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="declareOnFirstLine" value="false" />
+            <property name="linesCountBeforeDeclare" value="1" />
+            <property name="linesCountAfterDeclare" value="1" />
+            <property name="spacesCountAroundEqualsSign" value="0" />
+        </properties>
+    </rule>
+</ruleset>

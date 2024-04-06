@@ -1,0 +1,71 @@
+// https://aka.ms/devcontainer.json
+{
+    "name": "Existing Docker Compose (Extend)",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "laravel.test",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mkxml.vscode-filesize",
+                "patbenatar.advanced-new-file",
+                "sleistner.vscode-fileutils",
+                "bmewburn.vscode-intelephense-client",
+                "st-pham.php-refactor-tool",
+                "wongjn.php-sniffer",
+                "m1guelpf.better-pest",
+                "DEVSENSE.phptools-vscode",
+                "DEVSENSE.intelli-php-vscode",
+                "DEVSENSE.profiler-php-vscode",
+                "DEVSENSE.composer-php-vscode",
+                "pflannery.vscode-versionlens",
+                "MrChetan.phpstorm-parameter-hints-in-vscode",
+                "ryannaddy.laravel-artisan",
+                "shufo.vscode-blade-formatter",
+                "onecentlin.laravel-blade",
+                "IHunte.laravel-blade-wrapper",
+                "glitchbl.laravel-create-view",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "absszero.vscode-laravel-goto",
+                "onecentlin.laravel5-snippets",
+                "christian-kohler.path-intellisense",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "streetsidesoftware.code-spell-checker",
+                "medo64.render-crlf",
+                "miku3920.vscode-render-special-chars",
+                "usernamehw.errorlens",
+                "EditorConfig.EditorConfig",
+                "mikestead.dotenv",
+                "DotJoshJohnson.xml",
+                "github.vscode-github-actions",
+                "mhutchie.git-graph",
+                "eamodio.gitlens",
+                "GitHub.vscode-pull-request-github",
+                "ms-azuretools.vscode-docker",
+                "cweijan.vscode-database-client2"
+            ],
+            "settings": {
+                "files.eol": "\n",
+                "editor.renderWhitespace": "all",
+                "editor.unicodeHighlight.allowedLocales": {
+                    "zh-hant": true
+                },
+                "phpSniffer.run": "onSave",
+                "phpSniffer.autoDetect": true,
+                "php.format.codeStyle": "K&R",
+                "intelephense.format.braces": "k&r",
+                "[php]": {
+                    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+                }
+            }
+        }
+    },
+    "remoteUser": "sail",
+    "postCreateCommand": "chown -R 1000:1000 /var/www/html 2>/dev/null || true && composer install && pnpm install"
+    // "forwardPorts": [],
+    // "runServices": [],
+    // "shutdownAction": "none",
+}

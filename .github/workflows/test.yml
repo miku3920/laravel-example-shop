@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+        with:
+          php-version: "8.3"
+      - uses: actions/checkout@v3
+
+      - run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - run: php artisan key:generate
+
+      - run: vendor/bin/phpcs
+      - run: php artisan test
