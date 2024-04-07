@@ -1,26 +1,20 @@
 <x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+    <div>忘記密碼了嗎？沒問題。請提供您的電子郵件地址，我們將向您發送一個密碼重設連結，讓您可以選擇新的密碼。</div>
 
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <div>{{ session('status') }}</div>
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
-                autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        <label for="email">電子信箱</label>
+        <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+        <ul>
+            @foreach ((array) $errors->get('email') as $message)
+                <li>{{ $message }}</li>
+            @endforeach
+        </ul>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
+        <button>發送重設密碼郵件</button>
     </form>
 </x-guest-layout>
