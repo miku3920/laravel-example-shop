@@ -47,7 +47,8 @@
                 "ms-azuretools.vscode-docker",
                 "cweijan.vscode-database-client2",
                 "Vue.volar",
-                "dbaeumer.vscode-eslint"
+                "dbaeumer.vscode-eslint",
+                "hossaini.bootstrap-intellisense"
             ],
             "settings": {
                 "files.eol": "\n",
