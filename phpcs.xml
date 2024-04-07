@@ -9,6 +9,8 @@
     <file>routes</file>
     <file>tests</file>
 
+    <exclude-pattern>public/build</exclude-pattern>
+
     <arg name="colors" />
     <arg name="basepath" value="./" />
     <arg name="tab-width" value="4" />
