@@ -10,13 +10,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{category}', [ProductController::class, 'show'])
-    ->whereIn('category', [
-        'metal-stickers',
-        'special-effects',
-        'platforms',
-        'tools-and-accessories',
-    ]);
+Route::get('{category}/{sub_category?}', [ProductController::class, 'index'])->name('products.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
