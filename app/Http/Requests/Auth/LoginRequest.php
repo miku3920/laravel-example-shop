@@ -40,7 +40,7 @@ class LoginRequest extends FormRequest {
     public function authenticate(): void {
         $this->ensureIsNotRateLimited();
 
-        if (Auth::attempt($this->only('email', 'password'), $this->boolean('remember')) === false) {
+        if (!Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -57,7 +57,7 @@ class LoginRequest extends FormRequest {
      * @throws \Illuminate\Validation\ValidationException
      */
     public function ensureIsNotRateLimited(): void {
-        if (RateLimiter::tooManyAttempts($this->throttleKey(), 5) === false) {
+        if (!RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
             return;
         }
 

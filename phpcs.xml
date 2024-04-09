@@ -36,8 +36,6 @@
 
     <!-- 必須要有 declare(strict_types=1); -->
     <rule ref="Generic.PHP.RequireStrictTypes.MissingDeclaration" />
-    <!-- 必須使用 ===、!== -->
-    <rule ref="Squiz.Operators.ComparisonOperatorUsage.NotAllowed" />
     <!-- 多行陣列最後一項後面必須要有逗號，單行陣列最後一項後面禁止逗號 -->
     <rule ref="NormalizedArrays.Arrays.CommaAfterLast" />
     <!-- 行尾不可以有空格 -->
