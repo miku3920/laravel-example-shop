@@ -26,6 +26,12 @@ require __DIR__ . '/auth.php';
 Route::prefix('products')->group(function (): void {
     Route::get('/', [ProductController::class, 'index'])
         ->name('products.index');
+    Route::get('/{id}', [ProductController::class, 'show'])
+        ->whereNumber('id')
+        ->name('products.show');
+    Route::get('/{id}-{slug}', [ProductController::class, 'show'])
+        ->whereNumber('id')
+        ->name('products.show');
 });
 
 Route::get('/{category}/{sub_category?}', [ProductController::class, 'category'])->name('products.category');

@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class ProductController extends Controller {
@@ -81,5 +83,23 @@ class ProductController extends Controller {
             ->paginate(20);
 
         return view('products.index', compact('products', 'q'));
+    }
+
+    public function show(int $id, string $slug = ''): View|RedirectResponse {
+        $product = Product::find($id);
+
+        if (!$product) {
+            abort(404);
+        }
+
+        if ($product->name !== $slug) {
+            return Redirect::route(
+                'products.show',
+                ['id' => $product->id, 'slug' => $product->name],
+                301
+            );
+        }
+
+        return view('products.show', compact('product'));
     }
 }

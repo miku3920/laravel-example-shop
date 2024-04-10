@@ -11,7 +11,11 @@
         @else
             <ul>
                 @foreach ($products as $product)
-                    <li>{{ $product->name }} - ${{ $product->price }}</li>
+                    <li>
+                        {{ $product->name }} -
+                        ${{ $product->price }} -
+                        <a href="{{ route('products.show', ['id' => $product->id, 'slug' => $product->name]) }}">查看詳情</a>
+                    </li>
                 @endforeach
             </ul>
         @endif
