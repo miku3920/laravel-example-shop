@@ -16,17 +16,25 @@
                     $routes = [
                         '金屬貼' => route('products.index', ['category' => 'metal-stickers']),
                         '地台' => route('products.index', ['category' => 'accessories', 'sub_category' => 'platform']),
-                        '特效件' => route('products.index', ['category' => 'accessories', 'sub_category' => 'special-effects']),
+                        '特效件' => route('products.index', [
+                            'category' => 'accessories',
+                            'sub_category' => 'special-effects',
+                        ]),
                         '工具及周邊' => route('products.index', ['category' => 'tools-peripherals']),
-                    ]
+                    ];
                 @endphp
                 @foreach ($routes as $name => $route)
-                <li class="nav-item">
-                    <a class="nav-link {{ str_starts_with(url()->current(), $route) ? 'active' : '' }}"
-                        href="{{ $route }}">{{ $name }}</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ str_starts_with(url()->current(), $route) ? 'active' : '' }}"
+                            href="{{ $route }}">{{ $name }}</a>
+                    </li>
                 @endforeach
             </ul>
+            <form class="d-flex me-auto" action="{{ route('products.search') }}" method="GET">
+                <input class="form-control me-2" type="search" name="q" value="{{ request('q') }}"
+                    placeholder="請輸入關鍵字" aria-label="請輸入關鍵字">
+                <button class="btn btn-outline-success" style="width: 72px;" type="submit">搜尋</button>
+            </form>
             <ul class="navbar-nav">
                 @auth
                     <li class="nav-item">

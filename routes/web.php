@@ -22,4 +22,5 @@ Route::middleware('auth')->group(function (): void {
 
 require __DIR__ . '/auth.php';
 
+Route::get('/search', [ProductController::class, 'search'])->name('products.search');
 Route::get('/{category}/{sub_category?}', [ProductController::class, 'index'])->name('products.index');

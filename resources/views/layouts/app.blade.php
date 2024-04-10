@@ -14,22 +14,16 @@
 
 <body>
     <header class="container">
-        @include('layouts.navigation')
+        <x-nav></x-nav>
     </header>
 
-    <!-- Page Heading -->
     @if (isset($header))
-        <header>
-            <div>
-                {{ $header }}
-            </div>
-        </header>
+        <div>
+            {{ $header }}
+        </div>
     @endif
 
-    <!-- Page Content -->
-    <main class="container">
-        {{ $slot }}
-    </main>
+    {{ $slot }}
 </body>
 
 </html>

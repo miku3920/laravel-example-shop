@@ -69,9 +69,17 @@ class ProductController extends Controller {
 
         $products = Product::where($where)->paginate(20);
 
-        return view('products', [
-            'category' => $category,
-            'products' => $products,
-        ]);
+        return view('products', compact('category', 'products'));
+    }
+
+    public function search(Request $request): View {
+        $q = $request->input('q');
+
+        $products = Product::where('name', 'like', "%{$q}%")
+            ->orWhere('sub_name', 'like', "%{$q}%")
+            ->orWhere('specification', 'like', "%{$q}%")
+            ->paginate(20);
+
+        return view('search', compact('products', 'q'));
     }
 }

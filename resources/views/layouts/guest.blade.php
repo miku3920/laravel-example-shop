@@ -14,12 +14,10 @@
 
 <body>
     <header class="container">
-        @include('layouts.navigation')
+        <x-nav></x-nav>
     </header>
 
-    <main class="container">
-        {{ $slot }}
-    </main>
+    {{ $slot }}
 </body>
 
 </html>
