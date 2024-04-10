@@ -1,19 +1,21 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2>搜索結果：{{ $q }}</h2>
+        <h2>這是輪播圖</h2>
     </x-slot>
 
     <main class="container">
-        @if ($products->isEmpty())
+        <h1>商品列表</h1>
+
+        @if (!empty($q) && $products->isEmpty())
             <p>抱歉，找不到與 "{{ $q }}" 相關的商品。</p>
         @else
             <ul>
                 @foreach ($products as $product)
-                    <li>{{ $product->name }}</li>
+                    <li>{{ $product->name }} - ${{ $product->price }}</li>
                 @endforeach
             </ul>
         @endif
 
-        {{ $products->appends(['q' => $q])->links() }}
+        {{ $products->appends(['q' => $q ?? ''])->links() }}
     </main>
 </x-app-layout>

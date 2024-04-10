@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ProductController extends Controller {
 
-    public function index(string $category, string $sub_category = ''): View {
+    public function category(string $category = '', string $sub_category = ''): View {
         $where = [
             // 配件
             'accessories' => [
@@ -69,10 +69,10 @@ class ProductController extends Controller {
 
         $products = Product::where($where)->paginate(20);
 
-        return view('products', compact('category', 'products'));
+        return view('products.index', compact('category', 'products'));
     }
 
-    public function search(Request $request): View {
+    public function index(Request $request): View {
         $q = $request->input('q');
 
         $products = Product::where('name', 'like', "%{$q}%")
@@ -80,6 +80,6 @@ class ProductController extends Controller {
             ->orWhere('specification', 'like', "%{$q}%")
             ->paginate(20);
 
-        return view('search', compact('products', 'q'));
+        return view('products.index', compact('products', 'q'));
     }
 }

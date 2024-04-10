@@ -14,13 +14,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @php
                     $routes = [
-                        '金屬貼' => route('products.index', ['category' => 'metal-stickers']),
-                        '地台' => route('products.index', ['category' => 'accessories', 'sub_category' => 'platform']),
-                        '特效件' => route('products.index', [
+                        '金屬貼' => route('products.category', ['category' => 'metal-stickers']),
+                        '地台' => route('products.category', ['category' => 'accessories', 'sub_category' => 'platform']),
+                        '特效件' => route('products.category', [
                             'category' => 'accessories',
                             'sub_category' => 'special-effects',
                         ]),
-                        '工具及周邊' => route('products.index', ['category' => 'tools-peripherals']),
+                        '工具及周邊' => route('products.category', ['category' => 'tools-peripherals']),
                     ];
                 @endphp
                 @foreach ($routes as $name => $route)
@@ -30,7 +30,7 @@
                     </li>
                 @endforeach
             </ul>
-            <form class="d-flex me-auto" action="{{ route('products.search') }}" method="GET">
+            <form class="d-flex me-auto" action="{{ route('products.index') }}" method="GET">
                 <input class="form-control me-2" type="search" name="q" value="{{ request('q') }}"
                     placeholder="請輸入關鍵字" aria-label="請輸入關鍵字">
                 <button class="btn btn-outline-success" style="width: 72px;" type="submit">搜尋</button>
