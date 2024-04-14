@@ -14,7 +14,11 @@
                     <li>
                         {{ $product->name }} -
                         ${{ $product->price }} -
-                        <a href="{{ route('products.show', ['id' => $product->id, 'slug' => $product->name]) }}">查看詳情</a>
+                        <a
+                            href="{{ route('products.show', [
+                                'id' => $product->id,
+                                'slug' => str($product->name)->slug('-', null),
+                            ]) }}">查看詳情</a>
                     </li>
                 @endforeach
             </ul>
