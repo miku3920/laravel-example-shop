@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <!-- Session Status -->
     <div>{{ session('status') }}</div>
 
@@ -33,4 +33,4 @@
             <button>登入</button>
         </div>
     </form>
-</x-guest-layout>
+</x-app-layout>

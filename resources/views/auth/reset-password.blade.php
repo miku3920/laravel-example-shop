@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <!-- Session Status -->
     <div>{{ session('status') }}</div>
 
@@ -48,4 +48,4 @@
             <button>重設密碼</button>
         </div>
     </form>
-</x-guest-layout>
+</x-app-layout>

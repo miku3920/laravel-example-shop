@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <div>忘記密碼了嗎？沒問題。請提供您的電子郵件地址，我們將向您發送一個密碼重設連結，讓您可以選擇新的密碼。</div>
 
     <!-- Session Status -->
@@ -17,4 +17,4 @@
 
         <button>發送重設密碼郵件</button>
     </form>
-</x-guest-layout>
+</x-app-layout>

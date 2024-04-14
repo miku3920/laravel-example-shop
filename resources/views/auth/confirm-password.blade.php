@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <div>這是應用程序的安全區域。請在繼續之前確認您的密碼。</div>
 
     <!-- Session Status -->
@@ -16,4 +16,4 @@
         </ul>
         <button>確認</button>
     </form>
-</x-guest-layout>
+</x-app-layout>
