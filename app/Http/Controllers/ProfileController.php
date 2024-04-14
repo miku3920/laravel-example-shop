@@ -8,6 +8,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -43,7 +44,7 @@ class ProfileController extends Controller {
     /**
      * Delete the user's account.
      */
-    public function destroy(Request $request): RedirectResponse {
+    public function destroy(Request $request): HttpResponse|RedirectResponse {
         $request->validate([
             'password' => ['required', 'current_password'],
         ]);
