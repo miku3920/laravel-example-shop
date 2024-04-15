@@ -15,7 +15,10 @@
                 @php
                     $routes = [
                         '金屬貼' => route('products.category', ['category' => 'metal-stickers']),
-                        '地台' => route('products.category', ['category' => 'accessories', 'sub_category' => 'platform']),
+                        '地台' => route('products.category', [
+                            'category' => 'accessories',
+                            'sub_category' => 'platform',
+                        ]),
                         '特效件' => route('products.category', [
                             'category' => 'accessories',
                             'sub_category' => 'special-effects',
@@ -36,6 +39,9 @@
                 <button class="btn btn-outline-success" style="width: 72px;" type="submit">搜尋</button>
             </form>
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
+                </li>
                 @auth
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/profile') }}">會員資訊</a>
