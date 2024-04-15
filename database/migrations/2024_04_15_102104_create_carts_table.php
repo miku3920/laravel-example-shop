@@ -6,8 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
 
     /**
      * Run the migrations.
@@ -15,9 +14,8 @@ return new class extends Migration
     public function up(): void {
         Schema::create('carts', function (Blueprint $table): void {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable()->comment('使用者ID');
-            $table->unsignedBigInteger('product_id')->comment('商品ID');
-            $table->integer('quantity')->default(1)->comment('數量');
+            $table->unsignedBigInteger('user_id');
+            $table->json('items')->comment('購物車商品資訊');
             $table->timestamps();
         });
     }
