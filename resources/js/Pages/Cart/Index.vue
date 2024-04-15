@@ -1,9 +1,7 @@
 <script setup>
 import App from '@/Layouts/App.vue';
-import { Head } from '@inertiajs/vue3';
-import { computed } from 'vue';
-import { useForm } from '@inertiajs/vue3';
-import { reactive, watch } from 'vue';
+import { Head, useForm } from '@inertiajs/vue3';
+import { reactive, computed, watch } from 'vue';
 
 const props = defineProps({
     cart: {
