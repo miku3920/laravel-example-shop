@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 const total = computed(() => {
-    return props.cart.reduce((total, item) => {
+    return data.cart.reduce((total, item) => {
         return total + item.quantity * item.product.price;
     }, 0);
 });
