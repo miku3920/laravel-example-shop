@@ -27,7 +27,7 @@ const form = useForm({
 });
 
 const removeItem = (id) => {
-    data.cart = data.cart.filter((item) => item.id !== id)
+    data.cart = data.cart.filter((item) => item.product.id !== id)
 };
 
 let timer = null;
@@ -71,7 +71,7 @@ watch(
                             {{ item.quantity * item.product.price }}
                         </td>
                         <td>
-                            <button @click="removeItem(item.id)">移除</button>
+                            <button @click="removeItem(item.product.id)">移除</button>
                         </td>
                     </tr>
                 </tbody>
