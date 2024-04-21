@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="style">
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css', 'resources/css/style-index.css'])
+    </x-slot>
+
     <main>
         <section>
             <img src="{{ asset('storage/images/banner_index416.png') }}" class="img-fluid " width="100%">

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -10,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 
 Route::middleware('auth')->group(function (): void {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -36,5 +39,3 @@ Route::prefix('products')->group(function (): void {
 });
 
 Route::get('/{category}/{sub_category?}', [ProductController::class, 'category'])->name('products.category');
-
-Route::get('/contact-us', fn () => 'contact-us')->name('contact-us');
