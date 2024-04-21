@@ -1,0 +1,356 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* nav */
+.nav-bt {
+    position: absolute;
+    margin: 38px;
+    width: auto;
+    z-index: 1;
+    margin-left: 46vw;
+}
+
+.nav-top {
+    margin-top: 12px;
+}
+
+
+
+.black-bar {
+    color: white;
+    margin-top: 3px;
+    height: 108px;
+    background-color: black;
+    clip-path: polygon(0% 54px, 350px 54px, 404px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.logoimg {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 3rem;
+    rotate: -8deg;
+    z-index: 1;
+}
+
+.h1-01 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 80px;
+    font-weight: bolder;
+    color: white;
+    font-weight: 800px;
+    text-align: center;
+    z-index: 1;
+    background-image: linear-gradient(45deg, rgb(40, 6, 134), rgb(6, 126, 76));
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 12px;
+    -webkit-background-clip: text;
+}
+
+.button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(40deg, rgb(241, 61, 163), rgb(44, 7, 208), rgb(15, 2, 60));
+    border: 6px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* tab標 */
+
+.hd-step-list {
+    margin: 10px auto 0 auto;
+    /* text-align:center; */
+    align-items: center;
+    /* display:inline-block */
+}
+
+.done {
+    background-color: #000000;
+    color: white;
+}
+
+.hd-step-list>li {
+    border: 2px solid;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* .row {
+    margin-bottom: 30px;
+    margin-top:30px;
+  } */
+/* step 單 */
+.dis-blo p {
+    background-color: black;
+    width: 200px;
+    color: white;
+    height: 60px;
+    /* align-content: center; */
+    /* vertical-align: center; */
+}
+
+.col-arrow {
+    width: 40px;
+}
+
+.hd-step-list li {
+    display: inline-block;
+    margin-right: 10px;
+    /* Add spacing between items */
+}
+
+
+/* 底部 */
+.container-low {
+    /* position: relative; */
+    height: 150px;
+    width:100%;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    /* border-radius: 30px 30px 0 0; */
+    clip-path: polygon(0% 54px, 350px 54px, 404px 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+.bann-01 img {
+    display: block;
+    background-position: center;
+    background-size: contain;
+    /* width:10%; */
+    background-repeat: no-repeat;
+}
+
+.logoimg-bt {
+    position: absolute;
+    /* text-align: center; */
+    margin-left: 10%;
+    /* margin-right: auto; */
+    transform: translate(-50%);
+    margin-top: -25px;
+    z-index: 1;
+    rotate: -10deg;
+
+}
+
+.copyright {
+    line-height: 2rem;
+    color: white;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+
+.contactmail {
+    /* line-height: 2rem; */
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    /* vertical-align: text-bottom; */
+}
+
+.box-30 {
+    margin-top: 60px;
+}
+
+
+/* member-1 */
+.form-control-01 {
+    border: 0;
+    border-radius: initial;
+    width: 300px;
+
+    /* background-repeat: no-repeat; */
+    /* background-color: rgb(228, 228, 228); */
+}
+
+.form-01 {
+
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: initial;
+    /* border-radius:initial; */
+}
+
+.back-img {
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.btn-su {
+    width: 200px;
+}
+
+.des-back {
+    background-color: rgb(201, 202, 202);
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+}
+
+
+/* 麵包屑 */
+
+/* .custom-breadcrumb {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+  } */
+.custom-breadcrumb .breadcrumb-item {
+    font-size: 18px;
+    /* Change font size */
+    color: #000000;
+    /* Change text color */
+    text-decoration: none;
+}
+
+.custom-breadcrumb .breadcrumb-item.active {
+    color: #000000;
+    /* Change active item color */
+}
+
+/* modal模式 */
+.modal-header .modal-style .modal-content {
+    background-color: white;
+    width: 1200px;
+    height: 400px;
+    /* align-content: center; */
+}
+
+/* 訂單資料 */
+.order-title {
+    background-color: #000000;
+    color: white;
+    margin-left: 30px;
+}
+
+.box-01 {
+    display: block;
+    border: 4px;
+    background: white;
+    box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.16);
+}
+
+.product-tabs {
+    background: black;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.pro-nav-link {
+    color: white;
+}
+
+
+.pro-nav-link:hover {
+    color: rgb(246, 255, 0);
+}
+
+.dev-box {
+    border: 1px solid black;
+    padding: 0px 10px 0px 10px;
+    /* background-color: aqua; */
+}
+
+thead {
+    background: gray;
+}
+
+.form-reg-mail {
+    background: rgb(221, 221, 221);
+    border-radius: 30px;
+}
+
+.m-panel__body {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+
+}
+
+.nav-link :active{
+    font-weight: 800;
+}
+
+.table-title {
+    width: 400px;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    /* margin: auto; */
+    /* margin-top:40px; */
+}
+
+
+.table-info {
+    width: 900px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: left;
+}
+
+.center {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom:20px; */
+    border-radius: 30px;
+}
+
+.member-center {
+    width: 69%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom:20px; */
+    border-radius: 30px;
+}
+
+.container-member-info{
+    position:relative;
+    max-width:700px;
+    width:100%;
+    background:gray;
+    padding:25px;
+}
+
+.member-title{
+    background:rgb(221, 221, 221);;
+    width:30%;
+    font-size: 40px;
+    font-weight: 800;
+    padding:10px;
+    border-radius: 40px;
+    margin:auto;
+    vertical-align: text-top;
+    text-align: center;
+}
+
+.form-container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 20px;
+    /* border-radius: 10px; */
+}

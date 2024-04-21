@@ -36,3 +36,5 @@ Route::prefix('products')->group(function (): void {
 });
 
 Route::get('/{category}/{sub_category?}', [ProductController::class, 'category'])->name('products.category');
+
+Route::get('/contact-us', fn () => 'contact-us')->name('contact-us');

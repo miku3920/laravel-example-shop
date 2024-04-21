@@ -1,0 +1,378 @@
+      .b1 {
+        height: 4.188rem;
+        position: relative;
+        font-size: 3.438rem;
+        display: inline-block;
+        font-family: Inter;
+        color: #020202;
+        text-align: left;
+        z-index: 1;
+      }
+      .rectangle-parent {
+        border: 0;
+        padding: 0.875rem 1.25rem;
+        background-color: #e2e2e2;
+        width: 51.125rem;
+        border-radius: 47.5px;
+        flex-direction: row;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+ 
+      .frame-wrapper1,
+      .group,
+      .rectangle-parent {
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+        margin-top:4%;
+      }
+      .div8{
+        font-size: 24px;
+      }
+      .frame-wrapper1 {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .container-member {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.25rem;
+      }
+
+      .h2 {
+        margin: 0;
+        height: 3rem;
+        position: relative;
+        font-size: inherit;
+        font-weight: 700;
+        font-family: inherit;
+        display: inline-block;
+        z-index: 1;
+      }
+      .frame {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 3.938rem 0 0;
+        box-sizing: border-box;
+        min-width: 8.188rem;
+        font-size: 2.5rem;
+      }
+
+      .b4 {
+        position: relative;
+        text-decoration: none;
+        color:black;
+        font-weight:700;
+        /* z-index: 1; */
+      }
+      .wrapper1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 3.938rem 0 0;
+      }
+
+      .frame-parent3,
+      .wrapper2 {
+        display: flex;
+        /* align-items: flex-start; */
+        justify-content: flex-start;
+      }
+      .wrapper2 {
+        flex-direction: column;
+        padding: 3.938rem 0 0;
+        color: #b7b7b7;
+      }
+      .frame-parent3 {
+        width: 40.938rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 100%;
+      }
+
+      .frame-parent2 {
+        width: 64.375rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2.625rem;
+        max-width: 100%;
+      }
+      .h21 {
+        margin: 0;
+        height: 3rem;
+        position: relative;
+        font-size: inherit;
+        font-weight: 700;
+        font-family: inherit;
+        display: inline-block;
+        z-index: 1;
+      }
+      .wrapper3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 3.188rem 0 0;
+      }
+
+      .user-data-settings {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.813rem;
+      }
+
+      .user-data-settings-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2.25rem;
+        min-width: 9.438rem;
+      }
+
+      .basic-info-modify-pass,
+      .frame-parent4,
+      .frame-parent5 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+      }
+      .basic-info-modify-pass {
+        /* flex: 1; */
+        flex-direction: column;
+        gap: 1.875rem;
+        /* min-width: 17.063rem; */
+        color: #b7b7b7;
+      }
+ 
+      .frame-parent5 {
+        width: 37.625rem;
+        gap: 1.938rem;
+        font-size: 1.563rem;
+      }
+      .frame-parent4 {
+        gap: 4.469rem;
+        font-size: 2.5rem;
+      }
+      .rectangle-group {
+        align-self: stretch;
+        border: 1px solid #000;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 2.438rem 4.5rem 3.875rem;
+      }
+      .change-email-button,
+      .frame-parent1,
+      .rectangle-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+      }
+      .frame-parent1 {
+        align-self: stretch;
+        gap: 1.188rem;
+        font-size: 1.563rem;
+      }
+      .change-email-button {
+        width: 70rem;
+        gap: 4.375rem;
+      }
+      .login-wrapper {
+        /* align-self: stretch; */
+        display: flex;
+        /* flex-direction: row; */
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 1.375rem 5.269rem 1.25rem;
+        box-sizing: border-box;
+        max-width: 100%;
+        /* text-align: left; */
+        font-size: 2rem;
+        color: #000;
+        font-family: Inter;
+        /* min-height: 100vh; */
+      }
+    
+      .vertical-line {
+        width: 1px; /* Adjust the width of the line as needed */
+        height: 8%; /* Makes the line span the full height of its container */
+        background-color: rgb(204, 200, 200); /* Color of the line */
+        position: absolute; /* Positions the line absolutely */
+        left: 31%; /* Adjust the left position to move the line horizontally */
+        top: 56%; /* Position the line at the top of its container */
+        transform: translateX(-90%); /* Centers the line horizontally */
+    }
+    .vertical-line-1 {
+        width: 1px; /* Adjust the width of the line as needed */
+        height: 13%; /* Makes the line span the full height of its container */
+        background-color: rgb(204, 200, 200); /* Color of the line */
+        position: absolute; /* Positions the line absolutely */
+        left: 31%; /* Adjust the left position to move the line horizontally */
+        top: 73%; /* Position the line at the top of its container */
+        transform: translateX(-90%); /* Centers the line horizontally */
+    }
+    .line{
+        width: 100%; /* Width of the line */
+        height: 1px; /* Height of the line */
+        background-color: rgb(204, 200, 200); /* Color of the line */
+        
+    }
+
+/* 
+
+
+      @media screen and (max-width: 1200px) {
+        .rectangle-group {
+          padding-left: 2.25rem;
+          padding-right: 2.25rem;
+          box-sizing: border-box;
+        }
+        .change-email-button {
+          gap: 2.188rem;
+        }
+        .frame-parent6 {
+          padding-left: 13.938rem;
+          box-sizing: border-box;
+        }
+      }
+      @media screen and (max-width: 1050px) {
+        .subtract-parent {
+          padding-left: 2.438rem;
+          padding-right: 2.438rem;
+          box-sizing: border-box;
+        }
+        .div8 {
+          font-size: 1.625rem;
+    
+        }
+        .b1 {
+          font-size: 2.75rem;
+        }
+        .h2,
+        .h21 {
+          font-size: 2rem;
+        }
+        .frame-parent4 {
+          flex-wrap: wrap;
+          gap: 2.25rem;
+        }
+        .login-wrapper {
+          padding-bottom: 6.688rem;
+          box-sizing: border-box;
+        }
+        .div13 {
+          font-size: 1.625rem;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .search-input-field-parent {
+          gap: 1.438rem;
+        }
+        .frame-parent3 {
+          gap: 1rem;
+        }
+        .frame-parent2 {
+          gap: 1.313rem;
+        }
+        .user-data-settings-parent {
+          flex: 1;
+        }
+        .frame-parent5 {
+          flex-wrap: wrap;
+          gap: 0.938rem;
+        }
+        .rectangle-group {
+          gap: 1.5rem;
+          padding-top: 1.563rem;
+          padding-bottom: 2.5rem;
+          box-sizing: border-box;
+        }
+        .login-wrapper-1 {
+          gap: 1.063rem;
+        }
+        .login-wrapper {
+          padding-bottom: 4.375rem;
+          box-sizing: border-box;
+        }
+        .frame-parent6 {
+          padding-left: 6.938rem;
+          box-sizing: border-box;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        .subtract-parent {
+          gap: 1.438rem;
+        }
+        .div8 {
+          font-size: 1.188rem;
+        }
+        .b1 {
+          font-size: 2.063rem;
+        }
+        .b2,
+        .b3 {
+          font-size: 1.25rem;
+        }
+        .container {
+          flex-wrap: wrap;
+        }
+        .h2 {
+          font-size: 1.5rem;
+        }
+        .b4,
+        .div9 {
+          font-size: 1.25rem;
+          text-decoration: none;
+        }
+        .h21 {
+          font-size: 1.5rem;
+        }
+        .b5,
+        .b6,
+        .b7,
+        .div10,
+        .div11,
+        .div12 {
+          font-size: 1.25rem;
+        }
+ 
+        .frame-parent4 {
+          gap: 1.125rem;
+        }
+        .aygedsldgmailcom {
+          font-size: 1rem;
+        }
+        .div13 {
+          font-size: 1.188rem;
+        }
+        .copyright-toysyeh-all-right {
+          font-size: 1rem;
+        }
+        .frame-parent6 {
+          padding-left: 1.25rem;
+          box-sizing: border-box;
+        }
+      }
+
+      
+    
+     */
+    

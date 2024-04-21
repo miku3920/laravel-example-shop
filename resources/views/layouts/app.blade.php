@@ -13,17 +13,15 @@
 </head>
 
 <body>
-    <header class="container">
-        <x-nav></x-nav>
-    </header>
+    <x-header></x-header>
 
-    @if (isset($header))
-        <div>
-            {{ $header }}
-        </div>
+    @if (isset($banner))
+        {{ $banner }}
     @endif
 
     {{ $slot }}
+
+    <x-footer></x-footer>
 </body>
 
 </html>
