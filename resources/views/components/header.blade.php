@@ -63,22 +63,6 @@
     <nav class="black-bar">
         <div class="container-fluid">
             <ul class="nav-bt nav justify-content-end">
-                @php
-                    $routes = [
-                        '首頁' => route('home'),
-                        '金屬貼' => route('products.category', ['category' => 'metal-stickers']),
-                        '地台' => route('products.category', [
-                            'category' => 'accessories',
-                            'sub_category' => 'platform',
-                        ]),
-                        '特效件' => route('products.category', [
-                            'category' => 'accessories',
-                            'sub_category' => 'special-effects',
-                        ]),
-                        '工具及周邊' => route('products.category', ['category' => 'tools-peripherals']),
-                        '聯絡我們' => route('contact-us'),
-                    ];
-                @endphp
                 @foreach ($routes as $name => $route)
                     <li class="nav-item fs-5 fw-semibold">
                         <a class="nav-link text-white fs-4 {{ str_starts_with(url()->current(), $route) ? 'active' : '' }}"
