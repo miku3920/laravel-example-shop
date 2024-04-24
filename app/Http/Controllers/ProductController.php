@@ -34,11 +34,7 @@ class ProductController extends Controller {
     }
 
     public function show(int $id, string $url_slug = ''): View|RedirectResponse {
-        $product = Product::find($id);
-
-        if (!$product) {
-            abort(404);
-        }
+        $product = Product::findOrFail($id);
 
         $product_slug = Str::slug($product->name, '-', null);
 
