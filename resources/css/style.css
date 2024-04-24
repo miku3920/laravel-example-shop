@@ -355,3 +355,8 @@ thead {
     padding: 20px;
     /* border-radius: 10px; */
 }
+
+.card .btn {
+    z-index: 1;
+    position: relative;
+}
